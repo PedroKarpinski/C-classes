@@ -1,13 +1,11 @@
-all: printy
- 
-printy: main.o string_lib.o
-    gcc -o printy main.o string_lib.o
- 
-main.o: main.c string_lib.h
-    gcc -o main.o main.c -c -W -Wall -ansi -pedantic
- 
-string_lib.o: string_lib.c string_lib.h
-    gcc -o string_lib.o string_lib.c -c -W -Wall -ansi -pedantic
- 
+CC = gcc
+CFLAGS = -std=c99 -Wall -Wextra -Wvla -g
+
+all: string_lib.o
+	$(CC) $(CFLAGS) string_lib.o main.c -o $(EXECUTABLE)
+
+string_lib.o: string_lib.h
+	$(CC) $(CFLAGS) -c string_lib.c
+
 clean:
-    rm -rf *.o *~ printy
+	$(RM) *.o $(EXECUTABLE)
