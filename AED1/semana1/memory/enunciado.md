@@ -14,8 +14,6 @@ Saída esperada:
 Uma vez corrigido todos os problemas, a saída do programa deve ser a seguinte:
 
   Stage 1: Confidential details <br>
-  Stage 2: Confidential details (copied)
-  Progress: 0 1 2 3 4 5 6 7 8 9 
-  
-  Stage 3: Confidential details (using data)
-  
+  Stage 2: Confidential details (copied) <br>
+  Progress: 0 1 2 3 4 5 6 7 8 9 <br>
+  Stage 3: Confidential details (using data) 
