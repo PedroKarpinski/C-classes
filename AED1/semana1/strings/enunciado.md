@@ -3,23 +3,23 @@ A biblioteca string_lib define um tipo de dado String que contém um array de ca
 positivo representando o tamanho da string, ambos membros de uma estrutura. A memória para nossas 
 strings será alocada dinamicamente. A estrutura String é definida como segue:
 
-  typedef struct { <br>
-    char* data; // Ponteiro para o conteudo da string <br>
-    int length; // Tamanho da string (excluindo o terminador nulo) <br>
+  typedef struct {
+    char* data; // Ponteiro para o conteudo da string
+    int length; // Tamanho da string (excluindo o terminador nulo)
   }   String;
 
 Diferentemente das strings nativas de C, a nossa estrutura String armazena o próprio tamanho, o que 
 permite saber quando ela termina, sem depender do terminador nulo (\0). Ou seja, a String “abc” 
 terá tamanho 3, e não 4. As operações possíveis nessa estrutura encontram-se no arquivo string_lib.h:
 
-  #ifndef STRING_LIB_H <br>
-  #define STRING_LIB_H <br>
+  #ifndef STRING_LIB_H
+  #define STRING_LIB_H
 
-  String* string_create(char* content, int len); <br>
-  void string_destroy(String* str); <br>
-  void string_print(String str); <br>
-  String* string_reverse(String str); <br>
-  void string_append(String *str1, String str2); <br>
+  String* string_create(char* content, int len);
+  void string_destroy(String* str);
+  void string_print(String str);
+  String* string_reverse(String str);
+  void string_append(String *str1, String str2);
 
   #endif
 
