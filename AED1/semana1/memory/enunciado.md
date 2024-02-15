@@ -12,7 +12,12 @@ Falhar em chamar free para cada malloc é um vazamento de memória.
 
 Saída esperada:
 Uma vez corrigido todos os problemas, a saída do programa deve ser a seguinte:
+
   Stage 1: Confidential details
+  
   Stage 2: Confidential details (copied)
+  
   Progress: 0 1 2 3 4 5 6 7 8 9 
+  
   Stage 3: Confidential details (using data)
+  
