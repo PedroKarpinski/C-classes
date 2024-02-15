@@ -1,0 +1,28 @@
+Questão 1. Em aula, vimos uma implementação recursiva da função 
+    void destruir_lista(Lista l)
+Agora, apresente uma versão iterativa dessa função.
+---------------------------------------------------------------------------------------------------------
+Questão 2. Faça uma função que busca um elemento x em uma lista ligada, devolvendo o ponteiro
+para o nó encontrado ou NULL se o elemento não existir na lista.
+---------------------------------------------------------------------------------------------------------
+Questão 3. Faça uma função iterativa que remove a primeira ocorrência (se existir) de um elemento
+x de uma lista ligada dada.
+---------------------------------------------------------------------------------------------------------
+Questão 4. Faça uma função recursiva que remove a primeira ocorrência (se existir) de um elemento
+x de uma lista ligada dada.
+---------------------------------------------------------------------------------------------------------
+Questão 5. Faça uma função que remove todas as ocorrências de um elemento x de uma lista ligada
+dada.
+---------------------------------------------------------------------------------------------------------
+Questão 6. Usando a estrutura Lista definida em sala de aula, crie uma função 
+    void insert(Lista* l, int x) 
+que insere um elemento x em uma lista l. Observe que, diferentemente dos exemplos vistos em sala 
+de aula, você não pode retornar o endereço do início da nova lista. É por isso que, ao invés de 
+receber Lista l, você está recebendo Lista *l!
+---------------------------------------------------------------------------------------------------------
+Questão 7. Faça uma função que receba duas listas, digamos l1 e l2, como parâmetro e concatene a
+lista l2 no final da lista l1.
+---------------------------------------------------------------------------------------------------------
+Questão 8. Implemente a função Lista inverte(Lista l) que retorna um lista l com os elementos 
+invertidos. Mais precisamente, se os elementos da lista l estão na ordem a, b, c, d, e, então
+os elementos da lista retornada devem estar na ordem e, d, c, b, a.

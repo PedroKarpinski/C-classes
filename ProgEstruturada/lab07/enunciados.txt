@@ -1,0 +1,38 @@
+Questão 1. Escreva o programa wordcount. Este programa recebe como argumento uma arquivo e
+imprime um único inteiro que representa o número de palavras contidas no arquivo.
+---------------------------------------------------------------------------------------------------------
+Questão 2. Escreva o programa meucat que se comporta como o programa cat do Unix. Esse
+programa recebe como entrada uma sequência de um ou mais arquivos de texto e imprime o conteúdo
+desses arquivos na tela do usuário seguindo a ordem em que foi fornecido. A seguir, apresento uma
+forma válida de invocar o seu programa:
+    meucat arq01.txt arq02.txt senhas.csv ../alunos_pe.txt ../../alunos_pe2.txt
+Obs: o seu programa deve funcionar para qualquer quantidade de arquivos fornecidos pelo usuário.
+Caso o usuário não forneça nenhum arquivo, ou ele forneça um arquivo inexistente, o seu programa
+deve fornecer uma mensagem de erro para o usuário.
+---------------------------------------------------------------------------------------------------------
+Questão 3. Escreva o programa meugrep que se comporta como o programa grep do Unix. O programa 
+grep faz a busca de um padrão em um texto. A nossa versão será bem mais humilde: ao invés
+do padrão ser descrito por uma expressão regular, descreveremos o padrão simplesmente escrevendo
+a palavra que estamos buscando. O seu programa meugrep deve funcionar assim:
+    meugrep palavra arq01.txt arq02.txt arq03.txt arq04.txt (pode ter mais arquivos)
+O primeiro argumento que o seu programa irá receber é uma palavra, esse será o padrão que o seu
+programa deverá buscar. Na sequência, o usuário fornecerá uma lista com o caminho para um ou mais
+arquivos de texto. O seu programa dever procurar pela palavra fornecida em cada um dos arquivos
+e, para cada ocorrência encontrada, o seu programa dever imprimir uma linha seguindo o seguinte
+padrão:
+    nome do arquivo.txt:80: esta eh a linha que contem a **palavra** dentro do arquivo
+Na linha acima podemos ver que o seu programa deve imprimir o nome do arquivo no qual a palavra foi
+encontrada. O número que aparece na sequência, no caso do exemplo, 80, é o número da linha dentro
+do arquivo ’nome do arquivo.txt’ que contém a palavra buscada. Após o número, o seu programa
+deve imprimir o conteúdo da linha 80, que contém a palavra buscada. Além disso, o seu programa
+deve destacar essa palavra dentro da linha colocando ** ao redor da palavra.
+Ideia: uma outra forma aceitável de destacar a palavra é fazer a impressão da palavra usando cores.
+Para isso, basta imprimir um código especial para definir a cor dos caracteres. O exemplo a seguir
+imprimir a palavra ’esperando’ em vermelho:
+    printf("Nao espere ");
+    printf("\033[1;31m"); //faz a impressão mudar para vermelho
+    printf("esperando");
+    printf("\033[1;m"); //reseta para a cor default
+    printf(". Espere vivendo!");
+Para descobrir o código de outras cores e como escrever com underline, veja o link: 
+https://www.shellhacks.com/bash-colors/
