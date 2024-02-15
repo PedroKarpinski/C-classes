@@ -1,0 +1,88 @@
+Questão 1. Escreva um programa que, dado um inteiro n fornecido pelo usuário, leia n números
+inteiros fornecidos pelo usuário e compute a média desses números.
+---------------------------------------------------------------------------------------------------------
+Questão 2. Escreva um programa que, dado um inteiro n fornecido pelo usuário, leia n caracteres
+fornecidos pelo usuário e as armazene em um vetor. Na sequência, para cada uma das n entradas
+armazenadas no vetor, o seu programa deve imprimir a seguinte linha: “entrada xxx, conteudo
+yyy, endereco: zzz”, onde xxx deve ser substituído pelo índice da entrada, yyy pelo conteúdo
+dessa entrada no array e zzz pelo endereço de memória dessa entrada em decimal.
+---------------------------------------------------------------------------------------------------------
+Questão 3. Escreva um programa que, dado um inteiro n fornecido pelo usuário, leia n inteiros
+fornecidos pelo usuário e os armazene em um vetor. Na sequência, para cada uma das n entradas 
+armazenadas no vetor, o seu programa deve imprimir a seguinte linha: “entrada: xxx, conteudo:
+yyy, endereco: zzz”, onde xxx deve ser substituído pelo índice da entrada, yyy pelo conteúdo
+dessa entrada no array e zzz pelo endereço de memória dessa entrada em decimal.
+---------------------------------------------------------------------------------------------------------
+Questão 4. Escreva a função swap(a, b). Essa função recebe como parâmetro dois inteiros a e b
+e não tem nenhum retorno. O comportamento dessa função deve ser o seguinte: após a execução da
+mesma, os valores de a e b devem estar trocados, como ilustra o exemplo a seguir:
+    int a = 5;
+    int b = 7;
+    swap(a, b);
+    printf("a: %d\n", a); //imprime: 'a: 7'
+    printf("b: %d\n", b); //imprime: 'b: 5'
+---------------------------------------------------------------------------------------------------------
+Questão 5. Escreva a função inc(x). Essa função recebe apenas um parâmetro do tipo inteiro e
+não tem retorno. Seu comportamento é o seguinte: após a execução de inc(x), o valor de x está
+incrementado em uma unidade, como ilustra o exemplo a seguir:
+    int a = 5;
+    inc(a);
+    printf("%d\n", a); //imprime 6
+---------------------------------------------------------------------------------------------------------
+Questão 6. Escreva a função swap(a, b). Essa função recebe como parâmetro dois arrays de inteiros 
+a e b e não tem nenhum retorno. O comportamento dessa função deve ser o seguinte: após a
+execução da mesma, os valores de a e b devem estar trocados, como ilustra o exemplo a seguir:
+    int a[3] = {5, 6, 7};
+    int b[4] = {1, 2, 0, 8};
+    swap(a, b);
+    //conteúdo de a = {1, 2, 0, 8}
+    //conteúdo de b = {5, 6, 7}
+Você deve realizar essa tarefa apenas usando manipulação de ponteiro, não copie os elementos de um
+vetor no outro!
+---------------------------------------------------------------------------------------------------------
+Questão 7. Implemente a função strcat(a, b). Essa função recebe dois parâmetros a e b do tipo
+“string em C”, i.e., array de caracteres, e retorna uma string que é a concatenação da string a com a
+string b. Além disso, a sua função não deve alterar o conteúdo das variáveis a e b, que ainda podem
+ser úteis para o cliente da sua função.
+---------------------------------------------------------------------------------------------------------
+Questão 8. Escreva a função cartesiano(v1, n1, v2, n2). Essa função recebe como parâmetro
+dois vetores de inteiro, v1 e v2, e os seus respectivos tamanhos, n1 e n2. O retorno dessa função deve
+ser um array com os elementos do conjunto obtido pelo produto cartesiano de v1 por v2.
+---------------------------------------------------------------------------------------------------------
+Questão 9. Implemente a função char* revert(char* s). Essa função recebe uma “string de C”
+s e retornar uma nova “string de C” com os caracteres de s revertidos, i.e., listados da direita 
+para a esquerda.
+---------------------------------------------------------------------------------------------------------
+Questão 10. Implemente as funções:
+    • matriz_le(n, m) essa função lê e retorna uma matriz M de números inteiros fornecida pelo
+    usuário. Ela recebe dois parâmetros n e m, onde n é o número de linhas e m, o de colunas. Essa
+    função é responsável por alocar a memória para M e por ler todo o conteúdo de M, que deverá ser
+    fornecido pelo usuário.
+    • matriz_print(M, n, m) essa função imprime na tela do usuário a matriz M que tem n linhas
+    e m colunas.
+---------------------------------------------------------------------------------------------------------
+Questão 11. É muito comum que linguagens tenham um tipo de array dinâmico transparante para o
+usuário. Vamos adicionar tal funcionalidade à C para vetores de inteiros. Primeiro, a definição do
+tipo:
+    typedef struct {
+        int* data;
+        int capacity; //capacidade do 'array' data
+        int nelements; //número de elementos guardados em data
+    }* VectorInt;
+Para esse TAD, implemente as seguintes funções:
+    • VectorInt vectorint(void): cria um elemento do tipo VectorInt no qual data tem capacidade 1. 
+    O ponteiro para esse objeto é o retorno dessa função.
+    • void vectorint_insert(VectorInt v, int a): insere o inteiro a no vetor dinâmico v. Se
+    não houver espaço em data para inserir o elemento a, então você deve alocar um novo vetor
+    para data com o dobro da capacidade usada para o vetor data atual, copiar os valores do vetor
+    data antigo para o novo, e atualizar o endereço do ponteiro data no registro v.
+    • void vectorint_remove(VectorInt v, int a) remove todas as ocorrências do elemento
+    a do vetor v. Se, após a remoção, o número de elementos em data for menor do que a metade da
+    capacidade do array data, então você deve criar um novo array data com a metade da capacidade
+    do atual, copiar os valores do array data antigo para o novo, e atualizar o endereço do vetor data
+    no registro v (fazemos isso para evitar desperdício de memória).
+    • int vectorint_at(VectorInt v, int i) retorna o elemento que está na i-ésima entrada
+    do vetor.
+    • Crie funções adicionais para o seu TAD que sejam capazes de testar um elemento pertence à
+    VectorInt, que retorne a quantidade de elementos no vetor, e que destrua (libere a memória)
+    corretamente o vetor.

@@ -1,0 +1,74 @@
+Questão 1. Implemente a função recursiva:
+    void count_down(int n);
+Essa é uma função recursiva que faz uma contagem regressiva. Um exemplo da saída impressa por
+essa função quando chamamos count_down(5) poderia ser:
+    5
+    4
+    3
+    2
+    1
+    ACABOU!
+---------------------------------------------------------------------------------------------------------
+Questão 2. Implemente a função recursiva:
+    void count_up(unsigned int n);
+Nesse exercício, você não pode usar nenhuma variável global e nem mudar a assinatura da função.
+Essa é uma função recursiva que faz uma contagem progressiva. Um exemplo da saída impressa por
+essa função quando chamamos count_up(5) poderia ser:
+    0
+    1
+    2
+    3
+    4
+    5
+---------------------------------------------------------------------------------------------------------
+Questão 3. Implemente a função recursiva:
+    int soma(int v[], int n);
+Essa função recursiva retorna a soma de todos os elementos do vetor v.
+---------------------------------------------------------------------------------------------------------
+Questão 4. Implemente a função recursiva chamada inverte. Um dos parâmetros que essa função
+irá receber é char word[]. Você pode passar outros parâmetros se sentir necessidade. Como 
+resultado, essa função deve inverter a palavra recebida, i.e., se a word armazenar a palavra 
+“abobora”, após a execução da função, ela armazenará a palavra “aroboba”.
+---------------------------------------------------------------------------------------------------------
+Questão 5. Adapte o programa que resolve o problema da Torre de Hanoi visto em sala de aula. Ao
+invés de exibir os movimentos, imprima o número de movimentos necessários para mover os n discos.
+---------------------------------------------------------------------------------------------------------
+Questão 6. Implemente uma função recursiva para gerar a sequência de Collatz para um número
+inteiro positivo dado. A função deve seguir as regras da sequência de Collatz:
+    • Se o número atual for par, divida-o por 2.
+    • Se o número atual for ímpar, multiplique-o por 3 e some 1.
+A função deve imprimir cada termo da sequência até que o número atual seja 1, momento em que a
+recursão deve parar.
+Como exemplo, temos que a sequência de Collatz para o número 7 é:
+    7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+---------------------------------------------------------------------------------------------------------
+Questão 7. Escreva uma função recursiva que calcule (n escolhe k), para n ≥ 0 e k ≥ 0. 
+Para isso, observe a seguinte propriedade:
+    (n escolhe k) = ((n − 1) escolhe (k − 1)) + ((n − 1) escolhe k)
+---------------------------------------------------------------------------------------------------------
+Questão 8. Escreva um programa recursivo que, dado um número positivo n fornecido pelo usuário,
+seja capaz de imprimir todas as combinações dos n primeiros naturais. Para n = 3, um exemplo de
+saída seria:
+    2
+    1
+    2
+    3
+    12
+    13
+    23
+    123
+---------------------------------------------------------------------------------------------------------
+Questão 9. Escreva um programa recursivo que, dados n números positivos e um inteiro k, onde
+1 ≤ k ≤ n, seja capaz de imprimir todas as combinações de k elementos dos valores fornecidos. Um
+exemplo de entrada possível seria
+    4 3
+    1
+    7
+    2
+    8
+Na entrada acima, o usuário informa que entrará com 4 valores e que quer uma combinação de 3 em
+3. Uma possível saída seria:
+    1 7 2
+    1 7 8
+    1 2 8
+    7 2 8

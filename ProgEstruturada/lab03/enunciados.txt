@@ -1,0 +1,62 @@
+Questão 1. Escreva um programa que receba um caractere e uma frase e que imprima a frase até
+a primeira ocorrência do caractere fornecido. O seu programa funciona corretamente mesmo que o
+caractere fornecido não apareça na frase? Veja o exemplo abaixo.
+Entrada:
+    ,
+    A vida eh como uma caixa de chocolates, voce nunca sabe o que vai encontrar.
+Saída:
+    A vida eh como uma caixa de chocolates
+---------------------------------------------------------------------------------------------------------
+Questão 2. Escreva um programa que devolva o tamanho da maior cadeia de 0’s de uma string
+    Entrada: 11111010000011100111
+    Saída: 5
+---------------------------------------------------------------------------------------------------------
+Questão 3. Escreva um programa que converte os caracteres maiúsculos de uma string para minúsculos 
+e os minúsculos para maiúsculos. Suponha que só há caracteres latinos sem acentos.
+    Entrada: Sao Paulo
+    Saída: sAO pAULO
+---------------------------------------------------------------------------------------------------------
+Questão 4. Escreva um programa que leia uma palavra e uma frase e retorne “sim” se a palavra
+aparece na frase e “nao”, caso contrário.
+---------------------------------------------------------------------------------------------------------
+Questão 5. Escreva um programa que reformate os parágrafos de um texto quebrando as linhas do
+texto de forma que nenhuma linha exceda a coluna 80 (tenha mais de 80 caracteres).
+Exemplo de entrada:
+    A beira de um bosque muito grande, na fronteira leste do Condado, havia uma estrada larga, cinzenta.
+    Houve uma epoca em que muitas carrocas de mercadores
+    costumavam passar por
+    ali, vindas do sul, de alem do Brandevin; mas no tempo de que estou falando, um silencio caiu sobre
+    a estrada. Isso se deveu em grande parte ao crescimento das
+    lendas sobre o bosque e o rumor da antiga Floresta das Trevas no lado oeste da estrada; e as pessoas
+    comecaram
+    a dizer que la moravam Trolls. E outras coisas piores. De fato, a Floresta, que na verdade se
+    estendia muito para o leste, parecia ser ilimitada e impenetravel.
+Exemplo de saída:
+    A beira de um bosque muito grande, na fronteira leste do Condado, havia uma
+    estrada larga, cinzenta. Houve uma epoca em que muitas carrocas de mercadores
+    costumavam passar por ali, vindas do sul, de alem do Brandevin; mas no tempo de
+    que estou falando, um silencio caiu sobre a estrada. Isso se deveu em grande
+    parte ao crescimento das lendas sobre o bosque e o rumor da antiga Floresta das
+    Trevas no lado oeste da estrada; e as pessoas comecaram a dizer que la moravam
+    Trolls. E outras coisas piores. De fato, a Floresta, que na verdade se estendia
+    muito para o leste, parecia ser ilimitada e impenetravel.
+---------------------------------------------------------------------------------------------------------
+Questão 6. Crie o tipo de dados Conjunto e implemente as seguintes funções:
+    • Conjunto conjunto(int vet[]) cria um registro conjunto (Conjunto) no qual os elementos
+    são iguais ao do vetor vet;
+    • Conjunto conjunto_uniao(Conjunto A, Conjunto B) retorna o conjunto obtido pela união
+    do conjuntos A e B;
+    • char conjunto_pertence(int a, Conjunto A) retorna 1 se a pertence ao conjunto A e 0,
+    caso contrário.
+---------------------------------------------------------------------------------------------------------
+Questão 7. Crie o tipo de dados Matriz e implemente as seguintes funções
+    • Matriz matriz_le(int n) lê uma matriz quadrada de dimensões n × n e retorna.
+    • Matriz matriz_multiplica(Matriz A, Matriz B) retorna a matriz resultante da 
+    multiplicação da matriz A por B.
+---------------------------------------------------------------------------------------------------------
+Questão 8. Crie um struct data com os campos dia, mês e ano (todos do tipo inteiro); crie um
+struct aluno com um campo nome, data de nascimento (do tipo struct data) e RA. Então, escreva
+um programa que seja capaz de:
+    • Cadastrar alunos;
+    • Buscar alunos por nome (liste todos os alunos que casem com o nome ou sobrenome fornecido);
+    • Listar todos os alunos cuja data de nascimento esteja em um determinado intervalo.
