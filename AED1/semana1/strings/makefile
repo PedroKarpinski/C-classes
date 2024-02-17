@@ -6,7 +6,7 @@ EXECUTABLE = main
 all: string_lib.o
 	$(CC) $(CFLAGS) string_lib.o main.c -o $(EXECUTABLE)
 
-bignumber.o: string_lib.h
+string_lib.o: string_lib.h
 	$(CC) $(CFLAGS) -c string_lib.c
 
 clean:
