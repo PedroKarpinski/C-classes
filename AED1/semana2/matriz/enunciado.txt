@@ -1,0 +1,31 @@
+Objetivos:
+Praticar a construção/extensão de TADs.
+
+Definição do problema:
+O TAD Matriz permite representar e operar sobre matrizes de números reais (double). A interface do 
+TAD é definida no arquivo matriz.h. A implementação do TAD Matriz encontra-se no arquivo matriz.c. 
+A matriz é representada por um ponteiro para uma estrutura que contém o número de linhas e colunas 
+e um ponteiro para um array de double que armazena os elementos da matriz. No arquivo matriz.c já 
+estão implementadas as funções matriz_create, matriz_destroy, matriz_print, matriz_get, matriz_set, 
+matriz_rows, matriz_cols e matriz_equals. O seu trabalho consiste em implementar as funções restantes.
+
+O que fazer:
+Implemente as funções restantes do TAD Matriz, que são as seguintes:
+
+Matriz* matriz_add(Matriz* matriz1, Matriz* matriz2): Retorna uma nova matriz que é a soma das 
+matrizes matriz1 e matriz2.
+
+Matriz* matriz_sub(Matriz* matriz1, Matriz* matriz2): Retorna uma nova matriz que é a subtração das 
+matrizes matriz1 e matriz2.
+
+Matriz* matriz_scalar_mul(Matriz* matriz, double scalar): Retorna uma nova matriz que é o produto 
+da matriz matriz por um escalar scalar.
+
+Matriz* matriz_transpose(Matriz* matriz): Retorna uma nova matriz que é a transposta da matriz matriz.
+
+bool matriz_is_symmetric(Matriz* matriz): Retorna true se a matriz matriz é simétrica e false 
+caso contrário.
+
+Observações:
+As funções da API do TAD que retornam uma nova matriz devem alocar memória dinamicamente para a 
+nova matriz.
