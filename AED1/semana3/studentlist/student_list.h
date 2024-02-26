@@ -16,6 +16,7 @@ void list_insertAfter(StudentList *list, int position, unsigned int ra, char* na
 int list_size(StudentList *list);
 bool list_isEmpty(StudentList *list);
 
+
 // new functions
 Student* list_findByRa(StudentList* list, unsigned int ra);
 void list_incrementGrades(StudentList* list, float amount);
