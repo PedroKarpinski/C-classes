@@ -1,0 +1,74 @@
+Objetivos
+Praticar a utilização de pilhas em uma aplicação clássica.
+
+Definição do problema
+A conversão de um número decimal (base 10) para binário (base 2) é um problema clássico em computação. 
+A ideia é efetuar a divisão inteira do número decimal por 2 e guardar o resto da divisão. O resultado da 
+divisão inteira é dividido por 2 novamente e o resto é guardado. O processo é repetido até que o resultado 
+da divisão inteira seja 0. O número binário é formado pelos restos das divisões, lidos de baixo para cima.
+
+Por exemplo, suponha o número decimal 25. A conversão para binário é feita da seguinte forma:
+
+25 / 2 = 12, resto 1
+
+12 / 2 = 6, resto 0
+
+6 / 2 = 3, resto 0
+
+3 / 2 = 1, resto 1
+
+1 / 2 = 0, resto 1
+
+Ao lermos os restos “de baixo para cima”, obtemos o número binário 11001, que é a representação binária 
+do número decimal 25. Esse processo pode ser facilmente implementado com o uso de uma pilha. A ideia é 
+empilhar os restos das divisões e, ao final, desempilhar os elementos para obter o número binário.
+
+Arquivos prévios
+A atividade já possui alguns arquivos prévios:
+
+stack.h: interface do TAD Stack.
+
+dec_to_bin.h: arquivo de interface da atividade.
+
+dec_to_bin.c: arquivo de implementação da atividade.
+
+A implementação de pilha já está completa, isto é, você não pode alterar o arquivo stack.h. Para fazer a 
+atividade, você deve meramente usar as funções da API do TAD Stack. Nas operações da pilha que utilizam o 
+tipo Element, considere que Element é do tipo char.
+
+O que fazer
+A função char* decToBin(unsigned int n) recebe um inteiro n e retorna uma string contendo a representação 
+binária do número n. A implementação dessa função já está pronta e você não deve alterá-la:
+
+char* decToBin(unsigned int n) {
+    Stack* stack = binaryStack(n);
+    char* binaryStr = stackToString(stack);
+
+    stack_destroy(stack);
+
+    return binaryStr;
+}
+
+Basicamente, a função divide o processo de conversão em duas etapas: primeiro, ela empilha os restos das 
+divisões por 2, gerando uma pilha, e depois ela desempilha os elementos para formar a string que representa 
+o número binário. Cada etapa é realizada por uma função auxiliar. Seu trabalho consiste em implementar 
+essas duas funções auxiliares.
+
+Você precisa implementar as seguintes funções no arquivo dec_to_bin.c:
+
+Stack* binaryStack(unsigned int n): essa função recebe um número decimal n e retorna uma pilha contendo 
+os restos das divisões do número n por 2. A pilha deve ser preenchida com os restos das divisões por 2 até 
+que o resultado da divisão seja 0. Por exemplo, se n for 25, a operação stack_print(binaryStack(25)) deve 
+imprimir top -> 1 1 0 0 1.
+
+char* stackToString(Stack* s): essa função recebe uma pilha s e retorna uma string contendo os elementos da 
+pilha. A string deve ser a representação dos elementos da pilha, sendo que o topo da pilha é o primeiro caractere 
+da string e a base da pilha é o último caractere da string. Por exemplo, se a pilha s contiver os elementos 
+1, 1, 0, 0, 1, a operação printf("%s", stackToString(s)) deve imprimir 11001. A string retornada por 
+stackToString deve ser alocada dinamicamente. Lembre-se que string deve ser bem-formada, isto é, deve terminar 
+com o caractere nulo '\0'.
+
+Alertas
+Perceba que todas as funções retornam ponteiros para memória alocada dinamicamente. Isso significa que os 
+códigos que chamam as funções (códigos-cliente) devem liberar a memória alocada após o uso. Os testes automáticos 
+já fazem isso. Lembre-se de fazer também nos seus testes individuais.

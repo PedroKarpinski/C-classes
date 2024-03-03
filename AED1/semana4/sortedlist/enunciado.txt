@@ -1,0 +1,60 @@
+Objetivos
+- Praticar a inserção em listas com base em um critério de ordenação
+- Praticar o armazenamento de tipos compostos em listas
+
+Definição do problema
+O TAD Student permite representar estudantes com RA, nome e matrícula. Uma lista ordenada de estudantes é 
+definida pelo TAD SortedList, que armazena estudantes em uma lista simplesmente encadeada ordenada. Nessa 
+lista, obrigatoriamente, todos os estudantes devem estar em ordem crescente de RA, ou seja, o primeiro 
+estudante da lista tem o menor RA e o último estudante da lista tem o maior RA.
+
+Internamente, a implementação da lista utiliza dois ponteiros de controle, um para o primeiro elemento da 
+lista e outro para o último elemento da lista. O objetivo desses ponteiros é facilitar o acesso aos elementos 
+mínimo e máximo da lista, via as funções slist_getMin e slist_getMax, respectivamente.
+
+Em resumo, a atividade tem os seguintes arquivos prévios:
+
+student.h: interface do TAD Student.
+
+student.c: implementação do TAD Student.
+
+sorted_list.h: interface do TAD SortedList.
+
+sorted_list.c: implementação do TAD SortedList. Algumas operações já estão implementadas. Você pode 
+usar essas operações como auxílio para resolver e testar a atividade. Não alterar as implementações 
+que já estão prontas, sob o risco de corromper os testes.
+
+main.c: código-cliente para testar a sua implementação.
+
+O que fazer
+Primeiramente você deve estudar o código-base e compreender como funciona.
+
+Em seguida, implementar a seguinte função:
+
+bool slist_insert(SortedList* list, unsigned int ra, const char* name, float grade)
+
+Objetivo: inserir um estudante na lista (ra, nome e nota), de forma que a lista continue ordenada por RA.
+
+Retorno: false caso a lista já armazene um estudante com o mesmo RA, true caso contrário.
+
+Algumas observações:
+
+Como a lista é ordenada, a função deve inserir o estudante na posição correta da lista, de forma que a 
+lista continue ordenada.
+
+Como a lista utiliza dois ponteiros de controle, a função deve garantir que cada ponteiro de controle 
+aponte para o elemento correto após a inserção. Como resultado esperado, o elemento apontado pelo ponteiro 
+de controle first deve ser o estudante com menor RA e o elemento apontado pelo ponteiro de controle last 
+deve ser o estudante com maior RA.
+
+Não alterar, em hipótese alguma, as implementações das funções slist_getMin e slist_getMax.
+
+Restrições
+É obrigatório respeitar o encapsulamento do TAD SortedList, ou seja, no programa principal (ou código-cliente) 
+só é permitido acessar os serviços oferecidos pelas funções da API do TAD.
+
+Para fins de simplificar o código, não é preciso respeitar o encapsulamento do TAD Student, ou seja, é possível 
+acessar membros dessa estrutura sem passar pela API do TAD.
+
+Não altere ou suprima as funções que já estão implementadas no TAD SortedList, pois elas podem estar sendo usadas 
+nos testes.
