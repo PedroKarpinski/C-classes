@@ -1,0 +1,51 @@
+Objetivos
+- Aprender a manipular árvores binárias de busca (ABBs)
+- Praticar algoritmos recursivos em ABBs
+
+Arquivos prévios
+A atividade possui os seguintes arquivos prévios:
+
+bst_algs.h: arquivo de cabeçalho contendo a definição do nó de uma ABB e as assinaturas das funções que você deve 
+implementar.
+bst_algs.c: arquivo de implementação das funções que você deve implementar.
+main.c: arquivo principal que contém a função main com alguns testes para as funções. Você pode se basear 
+nesse arquivo para compreender como as funções são usadas.
+
+Representação de ABB
+Nessa atividade trabalhamos com uma árvore pura, ou seja, uma árvore que não está encapsulada em um TAD: a árvore 
+é representada meramente por um nó para a raiz. Para isso, foi necessário expor a definição do nó da árvore no 
+cabeçalho bst_algs.h. Por exemplo, a função bst_countNodes é declarada como:
+
+int bst_countNodes(Node *root);
+Todas as funções da atividade recebem um ponteiro para nó (Node*) como parâmetro. Essa é uma técnica diferente da 
+que usamos em aula, que é mais robusta, pois esconde os detalhes de implementação em um TAD. Mas optamos por essa 
+abordagem para simplificar a atividade, principalmente simplificar a implementação de algoritmos recursivos. Além 
+disso, você terá a chance de aprender outro tipo de representação de árvore, além do que vimos em aula.
+
+O que fazer
+Implementar as seguintes funções:
+
+bst_countNodes: conta o número de nós em uma ABB.
+
+bst_countLeaves: conta quantos nós folha (ou seja, nós sem filhos) existem em uma ABB.
+
+bst_countInternalNodes: conta quantos nós internos (ou seja, nós com pelo menos um filho) existem em uma ABB.
+
+bst_height: calcula a altura de uma ABB. Considere como definição de altura a quantidade de nós no caminho mais 
+longo da raiz até uma folha.
+
+bst_sum: retorna o somatório de valores armazenados nos nós de uma ABB.
+
+bst_max: retorna o maior valor armazenado nos nós de uma ABB. Caso a árvore esteja vazia, retornar a constante 
+MINIMUM (definida em bst_algs.h).
+
+bst_min: retorna o menor valor armazenado nos nós de uma ABB. Caso a árvore esteja vazia, retornar a constante 
+MAXIMUM (definida em bst_algs.h).
+
+bst_countSharedKeys: conta quantas chaves são compartilhadas entre duas ABBs, ou seja, quantas chaves estão presentes 
+em ambas as ABBs.
+
+Restrições
+Não é permitido alocar memória dinamicamente em nenhuma das funções.
+
+Não é permitido efetuar saída de dados (printf, puts, etc) em nenhuma das funções.
