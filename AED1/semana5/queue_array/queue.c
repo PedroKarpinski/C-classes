@@ -11,7 +11,7 @@ struct Queue {
     int capacity;
     int front;
     int back;
-}
+};
 
 Queue* queue_create(int capacity) {
     Queue* queue = malloc(sizeof(Queue));
